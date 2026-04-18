@@ -14,7 +14,7 @@ Continual Self-Supervised World and Agent Modeling via Sparse Transformer Percep
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.2+-red)](https://pytorch.org)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
-**Ashish Paka** | MS Robotics, LOGOS Lab, Arizona State University
+**Ashish Paka** | MS Robotics, LOGOS Robotics Lab, Arizona State University
 
 *A robot that knows it is tired, learns from what happens to it, and cares enough about itself to survive — will make better decisions than a robot that does not.*
 
@@ -26,7 +26,7 @@ Continual Self-Supervised World and Agent Modeling via Sparse Transformer Percep
 
 Autonomous agents deployed in GPS-denied, communication-degraded environments face a compound failure mode: the agent's world model and self-model degrade simultaneously, silently, and in ways that corrupt the diagnostic mechanisms that would normally detect degradation. Existing approaches treat perception, self-monitoring, and decision-making as separable subsystems — producing agents that are capable within their characterized domain but brittle at its boundary and incapable of growth beyond it.
 
-We present **PerSPARAMA**, a unified architecture coupling a sparse voxel transformer world model with a continuously updated homeostatic self-model through bidirectional cross-attention (`Z_relation`), such that every perceptual act is conditioned on the perceiver's physical state and every self-evaluation is conditioned on the current scene. Drawing on the neuroscience of discrete temporal integration — the ~400ms conscious ignition window of Global Workspace Theory — as a biological design prior, the architecture implements a buffer-commit-correct action cycle with adaptive temporal commitment. Skill boundary detection is generalized from named skill invocation to every decision the agent makes. Action selection uses an action-chunked transformer governed by dual-utility PPO, where mission reward and self-preservation reward are arbitrated through a learned, state-dependent exchange rate `α(t)` — operationalizing self-worth as a continuous prior rather than a safety constraint. The architecture is embodiment-agnostic via a formal interface contract.
+Presenting **PerSPARAMA**, a unified architecture coupling a sparse voxel transformer world model with a continuously updated homeostatic self-model through bidirectional cross-attention (`Z_relation`), such that every perceptual act is conditioned on the perceiver's physical state and every self-evaluation is conditioned on the current scene. Drawing on the neuroscience of discrete temporal integration — the ~400ms conscious ignition window of Global Workspace Theory — as a biological design prior, the architecture implements a buffer-commit-correct action cycle with adaptive temporal commitment. Skill boundary detection is generalized from named skill invocation to every decision the agent makes. Action selection uses an action-chunked transformer governed by dual-utility PPO, where mission reward and self-preservation reward are arbitrated through a learned, state-dependent exchange rate `α(t)` — operationalizing self-worth as a continuous prior rather than a safety constraint. The architecture is embodiment-agnostic via a formal interface contract.
 
 **Keywords:** homeostatic self-modeling, dual-utility RL, action chunking, sparse voxel transformers, continual learning, self-worth, OOD detection, embodied autonomy, skill boundary detection
 
